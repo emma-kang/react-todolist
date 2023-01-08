@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
-import Todo from './components/Todo';
+import {Container} from "@mui/material";
+import MainContainer from "./components/MainContainer";
 
 function App() {
   return (
     <div className="App">
-      <Todo />
+      <Container>
+        <MainContainer />
+      </Container>
     </div>
   );
 }
