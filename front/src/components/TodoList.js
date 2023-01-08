@@ -3,12 +3,20 @@ import TodoListItem from './TodoListItem';
 import {Box, Button, Grid, List, Stack, TextField, Typography} from "@mui/material";
 import { mockTodos } from "../mock/todos";
 
+/*
+* To-dos
+* 1. convert code to TS
+* 2. make reusable component
+* 3. create test code (unit, (option)e2e)
+* 4. back-end with Node.js
+* 5. modified front code to API
+ */
 export default function TodoList() {
   const [todos, setTodos] = useState([]);
   const [newTask, setNewTask] = useState('');
 
   useEffect(() => {
-    // load mock data
+    // load mock data - wil be replaced to api call
     setTodos(mockTodos);
   }, []);
 
