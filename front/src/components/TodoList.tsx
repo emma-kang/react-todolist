@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react';
 import TodoListItem from './TodoListItem';
-import { Box, Button, Grid, List, Stack, TextField, Typography } from '@mui/material';
+import { Box, Grid, List, Stack, Typography } from '@mui/material';
 import { addNewTask, mockTodos } from 'mock/todos';
 import { InputTodo, Todo } from "../global/Todo";
+import CustomTextField from "./common/CustomTextField";
+import CustomButton from "./common/CustomButton";
 
 /*
  * Todo:
- * 1. make reusable component
- * 2. create test code (unit, (option)e2e)
- * 3. back-end with Node.js
- * 4. modified front code to API
+ * 1. create test code (unit, (option)e2e)
+ * 2. back-end with Node.js
+ * 3. modified front code to API
  */
 
 export default function TodoList() {
@@ -63,20 +64,11 @@ export default function TodoList() {
           </Box>
         </Grid>
         <Grid item xs={12} sm={10}>
-          <TextField
-            id="task"
-            variant="standard"
-            label="New Task"
-            onChange={handleChange}
-            onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(e)}
-            sx={{ width: '100%' }}
-            value={newTask}
-          />
+          <CustomTextField id="task" variant="standard" label="New Task"
+                           handleChange={handleChange} handleKeyDown={handleKeyDown} sx={{width: '100%'}} value={newTask} />
         </Grid>
         <Grid item xs={12} sm={2}>
-          <Button variant="contained" onClick={addTodo} sx={{ bgcolor: '#283618', width: '100%' }}>
-            ADD
-          </Button>
+          <CustomButton variant="contained" handleClick={addTodo} text="ADD" sx={{ bgcolor: '#283618', width: '100%' }}/>
         </Grid>
       </Grid>
     </Stack>
