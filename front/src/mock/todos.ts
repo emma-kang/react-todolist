@@ -1,4 +1,4 @@
-import { InputTodo, Todo } from "../global/Todo";
+import { InputTodo, Todo } from "../global/types/Todo";
 
 export let mockTodos: Todo[] = [
   {

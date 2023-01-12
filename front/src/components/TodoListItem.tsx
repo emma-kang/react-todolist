@@ -1,7 +1,7 @@
 import { Checkbox, IconButton, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { useState } from "react";
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Todo } from "../global/Todo";
+import { Todo } from "../global/types/Todo";
 import {completeTask, deleteTask} from "../mock/todos";
 
 type TodoListItemProps = {

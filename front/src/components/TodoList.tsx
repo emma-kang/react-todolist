@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import TodoListItem from './TodoListItem';
 import { Box, Grid, List, Stack, Typography } from '@mui/material';
 import { addNewTask, mockTodos } from 'mock/todos';
-import { InputTodo, Todo } from "../global/Todo";
+import { InputTodo, Todo } from "../global/types/Todo";
 import CustomTextField from "./common/CustomTextField";
 import CustomButton from "./common/CustomButton";
 
