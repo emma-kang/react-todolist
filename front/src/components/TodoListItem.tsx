@@ -4,7 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { Todo } from "../global/types/Todo";
 import {completeTask, deleteTask} from "../mock/todos";
 
-type TodoListItemProps = {
+export type TodoListItemProps = {
   todos: Todo;
 }
 export default function TodoListItem({todos}: TodoListItemProps) {

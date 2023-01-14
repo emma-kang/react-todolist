@@ -8,9 +8,8 @@ import CustomButton from "./common/CustomButton";
 
 /*
  * Todo:
- * 1. create test code (unit, (option)e2e)
- * 2. back-end with Node.js
- * 3. modified front code to API
+ * 1. back-end with Node.js
+ * 2. modified front code to API
  */
 
 export default function TodoList() {
@@ -68,7 +67,7 @@ export default function TodoList() {
                            handleChange={handleChange} handleKeyDown={handleKeyDown} sx={{width: '100%'}} value={newTask} />
         </Grid>
         <Grid item xs={12} sm={2}>
-          <CustomButton variant="contained" handleClick={addTodo} text="ADD" sx={{ bgcolor: '#283618', width: '100%' }}/>
+          <CustomButton variant="contained" handleClick={addTodo} text="ADD" sx={{ bgcolor: '#283618', width: '100%', '&:hover': { bgcolor: '#3c5224'} }}/>
         </Grid>
       </Grid>
     </Stack>
