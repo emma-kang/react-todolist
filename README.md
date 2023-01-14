@@ -1,5 +1,7 @@
 # To Do App 
 
+To follow TDD, you should write test code first but this project has been written component code first in order to learn test code.
+
 ## Scripts
 `npm start` 
 
