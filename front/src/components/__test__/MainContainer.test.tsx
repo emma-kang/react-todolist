@@ -9,7 +9,7 @@ const renderComponent = () => (
 );
 
 describe('src/components/MainContainer', () => {
-  it('Should exist title', () => {
+  it('has title text', () => {
     const { getByTestId } = renderComponent();
     expect(getByTestId('page-title')).toHaveTextContent('To Do List');
   })
