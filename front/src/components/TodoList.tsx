@@ -67,7 +67,8 @@ export default function TodoList() {
                            handleChange={handleChange} handleKeyDown={handleKeyDown} sx={{width: '100%'}} value={newTask} />
         </Grid>
         <Grid item xs={12} sm={2}>
-          <CustomButton variant="contained" handleClick={addTodo} text="ADD" sx={{ bgcolor: '#283618', width: '100%', '&:hover': { bgcolor: '#3c5224'} }}/>
+          <CustomButton variant="contained" handleClick={addTodo} text="ADD"
+                        sx={{ bgcolor: '#283618', width: '100%', '&:hover': { bgcolor: '#3c5224'} }}/>
         </Grid>
       </Grid>
     </Stack>
