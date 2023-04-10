@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: process.env.APP_HOST_API_KEY,
+  baseURL: process.env.REACT_APP_HOST_API_KEY,
   headers: {
     'Content-Type': 'application/json',
   },
@@ -10,7 +10,6 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
   (config) => {
-    console.log(process.env.APP_HOST_API_KEY);
     const token = localStorage.getItem('accessToken');
     if (token) config.headers.Authorization = `Bearer ${token}`;
     return config;

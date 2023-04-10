@@ -6,6 +6,7 @@ export type Todo = {
 }
 
 export type InputTodo = {
+  accountId: number;
   task: string;
   completed: boolean;
 }
