@@ -1,27 +1,31 @@
 import { Checkbox, IconButton, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { useState } from "react";
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Todo } from "../global/types/Todo";
-import {completeTask, deleteTask} from "../mock/todos";
+import { InputTodo, Todo } from "../global/types/Todo";
+import useTodoStore from "../zustand/todoStore";
 
 export type TodoListItemProps = {
   todos: Todo;
 }
 export default function TodoListItem({todos}: TodoListItemProps) {
   const [checked, setChecked] = useState<boolean>(todos.completed);
+  const { deleteTodo, accountId, updateTodo } = useTodoStore();
 
   const handleClick = () => {
     setChecked(!checked);
   }
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
-    // following: call api to store each todo's current status
-    completeTask(Number(todos.id));
+    const data:InputTodo = {
+      accountId,
+      task: todos.task,
+      completed: event.target.checked
+    }
+    updateTodo(Number(todos.id), data);
   }
 
   const handleDelete = () => {
-    // following: call api to delete the todo
-    deleteTask(Number(todos.id));
+    deleteTodo(Number(todos.id));
   }
 
   return (
