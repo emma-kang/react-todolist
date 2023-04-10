@@ -13,13 +13,10 @@ export default function TodoListItem({todos}: TodoListItemProps) {
 
   const handleClick = () => {
     setChecked(!checked);
-  }
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setChecked(event.target.checked);
     const data:InputTodo = {
       accountId,
       task: todos.task,
-      completed: event.target.checked
+      completed: !checked,
     }
     updateTodo(Number(todos.id), data);
   }
@@ -42,7 +39,6 @@ export default function TodoListItem({todos}: TodoListItemProps) {
             <Checkbox
               edge="start"
               checked={checked}
-              onChange={handleChange}
               tabIndex={-1}
               sx={{
                 color: '#bc6c25',
