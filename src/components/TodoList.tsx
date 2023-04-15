@@ -42,7 +42,7 @@ export default function TodoList() {
         <Grid item xs={12}>
           <Box sx={{ bgcolor: '#fefae0', borderRadius: '10px', minHeight: 70, maxHeight: 412, overflowY: 'auto' }}>
             {todos && todos?.length > 0 ? (
-              <List sx={{ width: '100%' }}>
+              <List sx={{ width: '100%' }} data-testid="todo-list">
                 {todos.map((item: Todo) => (
                   <TodoListItem key={item.id} todos={item} />
                 ))}

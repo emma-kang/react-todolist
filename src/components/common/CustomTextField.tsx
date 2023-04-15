@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 
-type CustomTextFieldProps = {
+export type CustomTextFieldProps = {
   id: string;
   variant?: "standard" | "filled" | "outlined" | undefined;
   label: string;
@@ -19,6 +19,7 @@ export default function CustomTextField(props: CustomTextFieldProps) {
       onKeyDown={props.handleKeyDown}
       sx={props.sx}
       value={props.value}
+      data-testid="custom-text-field"
     />
   );
 }

@@ -22,6 +22,5 @@ describe('src/components/common/CustomButton', () => {
     const { getByTestId } = renderComponent(props);
     fireEvent.click(getByTestId('custom-btn'));
     expect(props.handleClick).toHaveBeenCalled();
-
   })
 });
